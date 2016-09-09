@@ -28,6 +28,21 @@ function makeMiddleEarth() {
   // inside, add each land as an article tag
   // inside each article tag include an h1 with the name of the land
   // append middle-earth to your document body
+  var createSectionTag = document.CreateElement("SECTION");
+  createSectionTag = createSectionTag.setAttribute("id","middle-earth");
+
+
+  for(i = 0; i < lands.length; i++){
+    var land = document.createElement("ARTICLE");
+    var nameOfLand = lands[i];
+    createSectionTag.appendChild(land.innerHTML = nameOfLand);
+  }
+
+  //create a node list of articles
+  //parse through node list and make name H1
+  var articles = document.getElementsByTagName("article")
+  for(i = 0; i < articles.length; i++)
+
 }
 
 makeMiddleEarth();
